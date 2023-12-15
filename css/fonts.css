@@ -1,0 +1,63 @@
+/* Light */
+@font-face {
+  font-family: "CircularSpotify";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/CircularSpotifyText-Light.otf") format("otf");
+}
+/* Regular */
+@font-face {
+  font-family: "CircularSpotify";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/CircularSpotifyText-Book.woff2") format("woff2"),
+    url("../fonts/CircularSpotifyText-Book.otf") format("otf");
+}
+@font-face {
+  font-family: "CircularSpotify";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/CircularSpotifyText-BookItalic.otf") format("otf");
+}
+/* Medium */
+@font-face {
+  font-family: "CircularSpotify";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/CircularSpotifyText-Medium.otf") format("otf");
+}
+@font-face {
+  font-family: "CircularSpotify";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/CircularSpotifyText-MediumItalic.otf") format("otf");
+}
+/* Bold*/
+@font-face {
+  font-family: "CircularSpotify";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/CircularSpotifyText-Bold.woff2") format("woff2"),
+    url("../fonts/CircularSpotifyText-Bold.otf") format("otf");
+}
+/* Black */
+@font-face {
+  font-family: "CircularSpotify";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/CircularSpotifyText-Black.otf") format("otf");
+}
+@font-face {
+  font-family: "CircularSpotify";
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/CircularSpotifyText-BlackItalic.otf") format("otf");
+}

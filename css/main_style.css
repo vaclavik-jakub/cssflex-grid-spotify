@@ -1,0 +1,45 @@
+.page__header{
+    display:flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.search-list__header {
+    display: flex;
+    align-content: space-between;
+}
+
+.track-widget {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px;
+    gap: 5px;
+}
+
+.track-widget__description {
+    display:flex;
+    flex-grow:1;
+    flex-direction: column;
+    flex-wrap:wrap;
+}
+
+.icon_heart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.track-widget__none {
+    display: none;
+}
+
+.bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bar__player {
+    display: flex;
+    flex-wrap: nowrap;
+}
+

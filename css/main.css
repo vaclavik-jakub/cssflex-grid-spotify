@@ -1,0 +1,185 @@
+@layer reset, init, layout, content, design;
+
+@import url(normalize.css) layer(reset);
+@import url(grid-layout.css) layer(layout);
+@import url(flexbox-content.css) layer(content);
+
+@layer reset {
+    @import url(fonts.css);
+
+    :root {
+        color-scheme: light;
+
+        --spotify: #1ed760;
+        --gray: #929292;
+        --background: inherit;
+        --black: #000000;
+        --light: #FFFFFF;
+
+        --bar-height: 6em;
+        --transition-time: 0.25s;
+    }
+
+    /* Dark mode – v devtools Ctrl + Shift + P = vyhledat scheme a emulovat na dark */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --spotify: #1ed760;
+            --gray: #d1d1d1;
+            --background: #121212;
+            --black: #FFFFFF;
+            --light: #000000;
+        }
+    }
+}
+
+@layer init {
+    html {
+        font-family: "CircularSpotify", sans-serif;
+        color: var(--black);
+        font-weight: 400;
+    }
+
+    .hidden {
+        font-size: 0;
+    }
+
+    .small {
+        font-size: small;
+    }
+
+    .link {
+        text-decoration: underline;
+    }
+
+    .img-responsive {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    .page a {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+@layer design {
+    .page {
+        background-color: var(--background);
+    }
+
+    .bar {
+        background-color: var(--light);
+    }
+
+    /* Bar */
+    .track-widget__thumbnail {
+        aspect-ratio: 1 / 1;
+        border-radius: 0.5em;
+        overflow: hidden;
+        max-height: calc(var(--bar-height)/1.5);
+    }
+
+    .track-widget__name {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .track-widget__name:hover {
+        text-decoration: underline;
+    }
+
+    .track-widget__author {
+        color: var(--gray);
+    }
+
+    .track-widget__author:hover {
+        text-decoration: underline;
+    }
+
+    .player-progress__line {
+        height: 0.25em;
+        background-color: var(--gray);
+        border-radius: 0.25em;
+    }
+
+    .search-list {
+        overflow: auto;
+        /* scroll bar */
+        scrollbar-width: thin;
+        scrollbar-color: var(--gray) var(--light);
+    }
+
+    .search-list::-webkit-scrollbar {
+        width: 0.5em;
+    }
+
+    .search-list::-webkit-scrollbar-track {
+        background: var(--light);
+    }
+
+    .search-list::-webkit-scrollbar-thumb {
+        background-color: var(--gray);
+        border-radius: 6px;
+        border: 3px solid var(--light);
+    }
+
+
+    /* Icons */
+    .icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        padding: 0.125em;
+        fill: var(--black);
+        transition: var(--transition-time) ease-in-out;
+    }
+
+    .icon:hover {
+        transform: scale(1.1);
+        transition: var(--transition-time) ease-in-out;
+    }
+
+    .icon--non-scale:hover {
+        transform: none;
+    }
+
+    /* Předelej - hover dej na a */
+
+    .icon--larger {
+        width: 1.25em;
+        height: 1.25em;
+    }
+
+    .icon--reversed {
+        fill: var(--light);
+        background-color: var(--spotify);
+        padding: 1em;
+        border-radius: 50%;
+        border: 1px solid transparent;
+    }
+
+    .icon--reversed:hover {
+        fill: inherit;
+        background-color: inherit;
+        border: 1px solid currentColor;
+    }
+
+    .icon--volume::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.25em;
+        background-color: var(--spotify);
+    }
+
+    .icon--arrow-right {
+        transform: rotate(-90deg);
+    }
+}
